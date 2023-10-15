@@ -1,24 +1,4 @@
-import requests
-import json
-import unittest
-import csv
-from bs4 import BeautifulSoup
-
-class URLValidationTest(unittest.TestCase):
-    base_url = "https://api.example.com"
-    api_path = "/your-api-endpoint"
-    authorization_key = "Bearer your-api-key"
-
-    def test_200_status(self):
-        url = self.base_url + self.api_path
-        headers = {"Authorization": self.authorization_key}
-        response = requests.get(url, headers=headers)
-        self.assertEqual(response.status_code, 200)
-
-    def test_404_status(self):
-        url = self.base_url + "/non-existent-endpoint"
-        headers = {"Authorization": self.authorization_key}
-        response = requests.get(url, headers=headers)
+aders=headers)
         self.assertEqual(response.status_code, 404)
 
     def test_500_status(self):
